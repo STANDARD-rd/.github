@@ -17,7 +17,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install black
         run: |
-          black --line-length 79 .
+          black --experimental-string-processing .
       - name: Set black branch name
         id: vars
         run: echo ::set-output name=branch-name::"black-patches/${{ github.head_ref }}"
